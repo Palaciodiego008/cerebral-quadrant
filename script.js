@@ -1,4 +1,4 @@
-console.log("Diego Dapo Developer -  Hub Innovation");
+console.log("Diego Dapo Developer - Hub Innovation");
 
 document.addEventListener("DOMContentLoaded", setupForm);
 
@@ -94,14 +94,49 @@ function calculateResults() {
   toggleModal(true);
 }
 
+const categoryDescriptions = {
+  CI: {
+    description:
+      "CI: Cortical Izquierdo. Características: Lógico, Analítico, Basado en hechos, Práctico.",
+  },
+  LI: {
+    description:
+      "LI: Límbico Izquierdo. Características: Organizador, Planificador, Detallista, Cuidadoso.",
+  },
+  LD: {
+    description:
+      "LD: Límbico Derecho. Características: Comunicador, Interpersonal, Afectivo, Emocional.",
+  },
+  CD: {
+    description:
+      "CD: Cortical Derecho. Características: Visionario, Holístico, Intuitivo, Integrador.",
+  },
+};
+
 function updateResults(counts) {
   const resultsDiv = document.getElementById("results");
   // Establecer el título una vez
   resultsDiv.innerHTML = "<h2>Resultados</h2><br>";
-  // Agregar los resultados sin sobrescribir el título
+
+  // Agregar los resultados con las descripciones sin sobrescribir el título
   const resultsContent = Object.entries(counts)
-    .map(([key, value]) => `<h2>${key}: ${value * 20}</h2>`)
+    .map(
+      ([key, value]) => `
+          <h3>${key}: ${value * 20}</h3>
+          <p>${categoryDescriptions[key].description}</p>
+      `
+    )
     .join("");
+
   // Usar insertAdjacentHTML para agregar después del título
   resultsDiv.insertAdjacentHTML("beforeend", resultsContent);
+
+  // Agregar la imagen después de los resultados
+  const imageContent = `
+      <img src="./assets/cortica-cerebral.webp" 
+           alt="Diagrama de Dominancia Cerebral" 
+           style="width: 100%; height: auto; margin-top: 20px;">
+  `;
+
+  resultsDiv.insertAdjacentHTML("beforeend", imageContent);
 }
