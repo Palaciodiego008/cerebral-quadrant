@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-    color: #007BFF;
+    color: #0801c3; /* Azul primario */
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -39,24 +39,65 @@ form p {
     font-weight: bold;
 }
 
-label {
-    display: block;
+.option {
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #0801c3; /* Borde azul */
+    border-radius: 5px;
+    padding: 15px;
     margin-bottom: 10px;
-    font-size: 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+input:focus {
+    border: 2px solid yellow; /* Cambia el color del borde a amarillo */
+}
+
+.option:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al pasar el cursor */
+}
+
+.option label {
+    display: block;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* Estilo para el radio button personalizado */
+.option input[type="radio"] {
+    display: none; /* Ocultar el radio button original */
+}
+
+.option input[type="radio"] + label {
+    position: relative;
+    padding-left: 30px;
     cursor: pointer;
 }
 
-input[type="radio"] {
-    margin-right: 10px;
-    cursor: pointer;
+.option input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0801c3; /* Borde inicialmente azul */
+    border-radius: 50%;
+    background-color: #fff; /* Fondo blanco */
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
 }
+
+.option input[type="radio"]:checked + label::before {
+    background-color: #fed900; /* Fondo amarillo cuando está seleccionado */
+    border-color: #fed900; /* Borde amarillo cuando está seleccionado */
+}
+
 
 button {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #FFD700; /* Amarillo IUB */
-    color: #007BFF; /* Azul IUB */
+    background-color: #fed900; /* Amarillo secundario */
+    color: #0801c3; /* Azul primario */
     border: none;
     border-radius: 5px;
     font-size: 1.2em;
@@ -66,7 +107,7 @@ button {
 }
 
 button:hover {
-    background-color: #F0E68C; /* Amarillo más claro */
+    background-color: #f0e68c; /* Amarillo más claro */
     color: #0056b3; /* Azul más oscuro */
 }
 

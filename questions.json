@@ -1,7 +1,7 @@
 {
     "questions": [
         {
-            "question": "Para qué sirve la escuela",
+            "question": "1. ¿Para qué sirve la escuela?",
             "options": [
                 "La escuela es indispensable para triunfar y adquirir conocimientos esenciales para ejercer una profesión.",
                 "La escuela es necesaria; en ella se aprenden métodos y reglas que después son útiles para organizarse en la vida.",
@@ -10,7 +10,7 @@
             ]
         },
         {
-            "question": "La vida escolar",
+            "question": "2. La vida escolar",
             "options": [
                 "En la escuela detesto los reglamentos, hay que obedecer a los timbres o a la campana, y llegar a una hora… si me pongo a pensar en otra cosa… me castigan.",
                 "La escuela estaría bien si no hubiera profesores porque en ella se encuentra uno con sus compañeros; desgraciadamente hay que estar callado y trabajar.",
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "question": "Relaciones con los profesores",
+            "question": "3. Relaciones con los profesores",
             "options": [
                 "Siempre trabajo mejor con los profesores que me resultan simpáticos.",
                 "Prefiero a los profesores que saben llevar su clase, incluso si me intimidan y me dan miedo.",
@@ -28,7 +28,7 @@
             ]
         },
         {
-            "question": "Importancia del programa",
+            "question": "4. Importancia del programa",
             "options": [
                 "Me gustan los profesores que dan por escrito el plan detallado del año. Con ellos se sabe a dónde se va.",
                 "Me gustan los profesores que terminan el programa. Es importante terminarlo para estar en buenas condiciones al comenzar el curso siguiente.",
@@ -37,7 +37,7 @@
             ]
         },
         {
-            "question": "Métodos de aprendizaje",
+            "question": "5. Métodos de aprendizaje",
             "options": [
                 "Hago los deberes y aprendo las lecciones de forma relajada.",
                 "Para trabajar bien necesito que haya alguien cerca de mi: mi madre, padre, compañero, compañera… Con frecuencia les hago preguntas o les pido ayuda.",
@@ -46,7 +46,7 @@
             ]
         },
         {
-            "question": "Trabajo en grupo",
+            "question": "6. Trabajo en grupo",
             "options": [
                 "Me gusta el trabajo en grupo, se divierte uno, se discute, se cambia; siempre sale algo de ello.",
                 "El trabajo en grupo es eficaz si está bien planeado; es necesario que las instrucciones sean muy claras y que el profesor imponga su disciplina.",
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "question": "Actitud durante un examen",
+            "question": "7. Actitud durante un examen",
             "options": [
                 "Estudio los temas seriamente para cualquier examen. Analizo en primer lugar el enunciado y hago un plan claro y lógico.",
                 "Cuando sé que va a haber un examen preparo bien mi material, hojas, estuche, etc. Me preocupo principalmente de presentar bien mi trabajo, pues sé que los profesores le dan mucha importancia.",
@@ -64,7 +64,7 @@
             ]
         },
         {
-            "question": "Preguntas orales en matemáticas",
+            "question": "8. Preguntas orales en matemáticas",
             "options": [
                 "Me da miedo pasar al pizarrón, no consigo escribir derecho y me cuesta trabajo concentrar mis ideas cuando me mira todo el mundo.",
                 "Estoy a gusto en el pizarrón, pero no me gustan los profesores que califican las preguntas orales, porque los que más saben “soplan” a los que saben menos y así todo resulta falso.",
@@ -73,7 +73,7 @@
             ]
         },
         {
-            "question": "Sensibilidad a las calificaciones",
+            "question": "9. Sensibilidad a las calificaciones",
             "options": [
                 "Doy mucha importancia a las notas, pregunto por el criterio que se va a aplicar antes de comenzar mis exámenes. Apunto todas mis notas y trazo mis gráficas de cada asignatura para verificar mi marcha a lo largo del curso.",
                 "No apunto mis notas, conozco más o menos mi nivel y cuando lo necesito pido mis notas a los profesores para sacar el promedio.",
@@ -82,7 +82,7 @@
             ]
         },
         {
-            "question": "Materias preferidas",
+            "question": "10. Materias preferidas",
             "options": [
                 "Me gustan las asignaturas en las que puedo actuar y tomar iniciativa: talleres, trabajos manuales, gimnasia, educación física.",
                 "Prefiero los cursos en los que puedo lanzarme a fondo en lo que estoy haciendo: informática, actividades tecnológicas, dibujo.",
@@ -91,7 +91,7 @@
             ]
         },
         {
-            "question": "Lecturas",
+            "question": "11. Lecturas",
             "options": [
                 "Me gusta leer cuentos y novelas de amor.",
                 "Me gustan las historias sentimentales y policiacas. Detesto los relatos de terror.",
@@ -100,7 +100,7 @@
             ]
         },
         {
-            "question": "Idiomas",
+            "question": "12 .Idiomas",
             "options": [
                 "Me gustan los cursos en los que se aprende a hablar un idioma extranjero aunque me cueste esfuerzo.",
                 "No me gustan las clases en las que hay que aprender todo de memoria, prefiero los cursos que exigen razonamiento.",

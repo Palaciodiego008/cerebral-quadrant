@@ -1,33 +1,41 @@
+// JavaScript
+
 console.log("Diego Dapo Developer - Hub Innovation");
 
 document.addEventListener("DOMContentLoaded", setupForm);
 
 async function fetchQuestions() {
-  const response = await fetch("questions.json");
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
+  try {
+    const response = await fetch("questions.json");
+    if (!response.ok) throw new Error("Network response was not ok");
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching questions:", error);
+    throw error; // Propagar el error para manejo externo
   }
-  return response.json();
 }
 
 function createQuestionElement(question, index, rasgoMapping) {
   const questionDiv = document.createElement("div");
-  questionDiv.classList.add("question");
-  questionDiv.innerHTML = `
-        <p>${question.question}</p>
-        ${question.options
-          .map(
-            (option, optionIndex) => `
-            <label>
-                <input type="radio" name="question${index + 1}" value="${
-              rasgoMapping[index][optionIndex]
-            }">
-                ${option}
-            </label>
-        `
-          )
-          .join("")}
-    `;
+  questionDiv.className = "question";
+  const questionP = document.createElement("p");
+  questionP.textContent = question.question;
+  questionDiv.appendChild(questionP);
+
+  question.options.forEach((option, optionIndex) => {
+    const optionDiv = document.createElement("div");
+    optionDiv.className = "option";
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = `question${index + 1}`;
+    input.value = rasgoMapping[index][optionIndex];
+    label.appendChild(input);
+    label.append(option);
+    optionDiv.appendChild(label);
+    questionDiv.appendChild(optionDiv);
+  });
+
   return questionDiv;
 }
 
@@ -36,41 +44,40 @@ async function setupForm() {
     const data = await fetchQuestions();
     const questions = data.questions;
     const rasgoMapping = getRasgoMapping();
-
     const form = document.getElementById("questionnaire-form");
-    const fragment = document.createDocumentFragment();
     questions.forEach((question, index) => {
-      const questionElement = createQuestionElement(
-        question,
-        index,
-        rasgoMapping
-      );
-      fragment.appendChild(questionElement);
+      const questionElement = createQuestionElement(question, index, rasgoMapping);
+      form.appendChild(questionElement);
     });
-    form.appendChild(fragment);
-
+    setupRadioListeners();
     setupModalCloseEvent();
   } catch (error) {
-    console.error("Error fetching or parsing questions.json", error);
+    console.error("Error setting up form:", error);
   }
 }
 
-function getRasgoMapping() {
-  return [
-    ["CI", "LI", "LD", "CD"],
-    ["CD", "LD", "CI", "LI"],
-    ["LD", "LI", "CD", "CI"],
-    ["LI", "CI", "LD", "CD"],
-    ["CD", "LD", "LI", "CI"],
-    ["LD", "LI", "CD", "CI"],
-    ["CI", "LI", "CD", "LD"],
-    ["LI", "CI", "LD", "CD"],
-    ["CI", "CD", "LI", "LD"],
-    ["LD", "CI", "CD", "LI"],
-    ["LI", "CI", "LD", "CD"],
-    ["LD", "CI", "LI", "CD"],
-  ];
+function setupRadioListeners() {
+  const radioButtons = document.querySelectorAll('input[type="radio"]');
+  
+  radioButtons.forEach((radio) => {
+    radio.addEventListener("change", () => {
+      // Get the question container for the radio button
+      let questionContainer = radio.closest('.question');
+      
+      if (questionContainer) {
+        questionContainer.querySelectorAll('.option').forEach(optionContainer => {
+          optionContainer.style.backgroundColor = ""; //
+        });
+
+        const optionContainer = radio.closest('.option');
+        if (optionContainer) {
+          optionContainer.style.backgroundColor = "yellow";
+        }
+      }
+    });
+  });
 }
+
 
 function setupModalCloseEvent() {
   const closeModalButton = document.querySelector(".close");
@@ -85,11 +92,9 @@ function toggleModal(show) {
 function calculateResults() {
   const formData = new FormData(document.getElementById("questionnaire-form"));
   const counts = { CI: 0, LI: 0, LD: 0, CD: 0 };
-
   for (let value of formData.values()) {
-    counts[value]++;
+    if (counts.hasOwnProperty(value)) counts[value]++;
   }
-
   updateResults(counts);
   toggleModal(true);
 }
@@ -139,4 +144,21 @@ function updateResults(counts) {
   `;
 
   resultsDiv.insertAdjacentHTML("beforeend", imageContent);
+}
+
+function getRasgoMapping() {
+  return [
+    ["CI", "LI", "LD", "CD"],
+    ["CD", "LD", "CI", "LI"],
+    ["LD", "LI", "CD", "CI"],
+    ["LI", "CI", "LD", "CD"],
+    ["CD", "LD", "LI", "CI"],
+    ["LD", "LI", "CD", "CI"],
+    ["CI", "LI", "CD", "LD"],
+    ["LI", "CI", "LD", "CD"],
+    ["CI", "CD", "LI", "LD"],
+    ["LD", "CI", "CD", "LI"],
+    ["LI", "CI", "LD", "CD"],
+    ["LD", "CI", "LI", "CD"],
+  ];
 }
