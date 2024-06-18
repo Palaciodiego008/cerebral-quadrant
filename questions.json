@@ -1,0 +1,112 @@
+{
+    "questions": [
+        {
+            "question": "Para qué sirve la escuela",
+            "options": [
+                "La escuela es indispensable para triunfar y adquirir conocimientos esenciales para ejercer una profesión.",
+                "La escuela es necesaria; en ella se aprenden métodos y reglas que después son útiles para organizarse en la vida.",
+                "La escuela nos enseña a vivir en sociedad, a comunicarnos y a trabajar en grupo. Es útil para adaptarse a la vida.",
+                "En la escuela se encuentran ideas y pistas para soñar e imaginar. Esto da ganas de saber más, de leer e investigar, de viajar… pero no de trabajar para tener una profesión."
+            ]
+        },
+        {
+            "question": "La vida escolar",
+            "options": [
+                "En la escuela detesto los reglamentos, hay que obedecer a los timbres o a la campana, y llegar a una hora… si me pongo a pensar en otra cosa… me castigan.",
+                "La escuela estaría bien si no hubiera profesores porque en ella se encuentra uno con sus compañeros; desgraciadamente hay que estar callado y trabajar.",
+                "Me gusta la escuela y creo que es útil para llegar a ser algo en la vida. Lamento que no todos los profesores sean capaces de hacernos progresar con suficiente rapidez.",
+                "La escuela es importante, por eso no me gusta que los profesores se ausenten o que sean incapaces de hacer callar a los que nos impiden trabajar."
+            ]
+        },
+        {
+            "question": "Relaciones con los profesores",
+            "options": [
+                "Siempre trabajo mejor con los profesores que me resultan simpáticos.",
+                "Prefiero a los profesores que saben llevar su clase, incluso si me intimidan y me dan miedo.",
+                "Prefiero siempre los profesores fantasiosos e inventivos.",
+                "Aprecio a los profesores que conocen bien su materia y hacen sus clases muy intensas."
+            ]
+        },
+        {
+            "question": "Importancia del programa",
+            "options": [
+                "Me gustan los profesores que dan por escrito el plan detallado del año. Con ellos se sabe a dónde se va.",
+                "Me gustan los profesores que terminan el programa. Es importante terminarlo para estar en buenas condiciones al comenzar el curso siguiente.",
+                "No me gustan los profesores que rechazan una discusión interesante para poder terminar la lección. Creo que es necesario saber dar a las clases un ambiente relajado.",
+                "Me gustan mucho los profesores que actúan como si no hubiese programa, hablan de temas apasionantes y se detienen en ellos mucho tiempo."
+            ]
+        },
+        {
+            "question": "Métodos de aprendizaje",
+            "options": [
+                "Hago los deberes y aprendo las lecciones de forma relajada.",
+                "Para trabajar bien necesito que haya alguien cerca de mi: mi madre, padre, compañero, compañera… Con frecuencia les hago preguntas o les pido ayuda.",
+                "Trabajo siempre en el mismo sitio y a la misma hora; hago por punto lo que me han aconsejado. Me gusta tener cosas que hacer en casa.",
+                "Trabajo solo y bastante deprisa, sé exactamente cómo hacer el trabajo que me han asignado; me concentro y no dejo que nada me distraiga antes de terminar."
+            ]
+        },
+        {
+            "question": "Trabajo en grupo",
+            "options": [
+                "Me gusta el trabajo en grupo, se divierte uno, se discute, se cambia; siempre sale algo de ello.",
+                "El trabajo en grupo es eficaz si está bien planeado; es necesario que las instrucciones sean muy claras y que el profesor imponga su disciplina.",
+                "No me gusta el trabajo en grupo, hay que seguir las instrucciones y respetar las opiniones de los compañeros; no consigo hacer valer mis ideas originales, tengo que seguir la ley del grupo.",
+                "El trabajo en grupo casi nunca es eficaz, siempre hay compañeros que se aprovechan de él para no hacer nada o hablar de otra cosa… no se puede trabajar seriamente."
+            ]
+        },
+        {
+            "question": "Actitud durante un examen",
+            "options": [
+                "Estudio los temas seriamente para cualquier examen. Analizo en primer lugar el enunciado y hago un plan claro y lógico.",
+                "Cuando sé que va a haber un examen preparo bien mi material, hojas, estuche, etc. Me preocupo principalmente de presentar bien mi trabajo, pues sé que los profesores le dan mucha importancia.",
+                "A veces tengo malas notas en los exámenes porque leo muy deprisa el enunciado, me salgo del tema o no aplico el método adecuado. Soy distraído e independiente.",
+                "No me gusta encontrarme solo ante mi hoja. Me cuesta trabajo concentrarme, hago cualquier cosa para atraer al profesor, le pregunto cosas, miro a mis compañeros y les pido que me soplen."
+            ]
+        },
+        {
+            "question": "Preguntas orales en matemáticas",
+            "options": [
+                "Me da miedo pasar al pizarrón, no consigo escribir derecho y me cuesta trabajo concentrar mis ideas cuando me mira todo el mundo.",
+                "Estoy a gusto en el pizarrón, pero no me gustan los profesores que califican las preguntas orales, porque los que más saben “soplan” a los que saben menos y así todo resulta falso.",
+                "Cuando paso al pizarrón me las arreglo para que los demás se rían, y provocar así la benevolencia del profesor. Esto no resulta siempre y no consigo disimular durante mucho tiempo mis dificultades.",
+                "Me gusta que me pregunten cuando puedo elegir el momento levantando la mano; a veces soy capaz de encontrar fácilmente la solución de problemas complicados y no veo la solución de otros más sencillos."
+            ]
+        },
+        {
+            "question": "Sensibilidad a las calificaciones",
+            "options": [
+                "Doy mucha importancia a las notas, pregunto por el criterio que se va a aplicar antes de comenzar mis exámenes. Apunto todas mis notas y trazo mis gráficas de cada asignatura para verificar mi marcha a lo largo del curso.",
+                "No apunto mis notas, conozco más o menos mi nivel y cuando lo necesito pido mis notas a los profesores para sacar el promedio.",
+                "Guardo todos mis exámenes calificados, sumo los puntos cuidadosamente porque he observado que muchos profesores se olvidan de sumar algunos puntos, lo que siempre me enoja.",
+                "Me inquietan mucho las notas que me ponen; temo la reacción de mis padres y me gustaría saber en el acto si he acertado o no. Quisiera que los exámenes se corrigieran en clase y que el profesor explicara todas las respuestas."
+            ]
+        },
+        {
+            "question": "Materias preferidas",
+            "options": [
+                "Me gustan las asignaturas en las que puedo actuar y tomar iniciativa: talleres, trabajos manuales, gimnasia, educación física.",
+                "Prefiero los cursos en los que puedo lanzarme a fondo en lo que estoy haciendo: informática, actividades tecnológicas, dibujo.",
+                "Prefiero las materias en las que se reflexiona, se piensa, se sacan conclusiones: matemáticas, física, química.",
+                "Me gustan las materias en las que se habla mucho: historia, geografía, literatura, filosofía."
+            ]
+        },
+        {
+            "question": "Lecturas",
+            "options": [
+                "Me gusta leer cuentos y novelas de amor.",
+                "Me gustan las historias sentimentales y policiacas. Detesto los relatos de terror.",
+                "Me gustan las historias fantásticas y de ciencia ficción.",
+                "Prefiero los relatos realistas, las biografías, los testimonios."
+            ]
+        },
+        {
+            "question": "Idiomas",
+            "options": [
+                "Me gustan los cursos en los que se aprende a hablar un idioma extranjero aunque me cueste esfuerzo.",
+                "No me gustan las clases en las que hay que aprender todo de memoria, prefiero los cursos que exigen razonamiento.",
+                "Me gustan las clases de idiomas en las que el profesor utiliza métodos audiovisuales (videos, grabaciones…).",
+                "Prefiero los cursos en los que se presentan aspectos interesantes de la civilización extranjera, su historia, su literatura."
+            ]
+        }
+    ]
+}
