@@ -1,3 +1,5 @@
+console.log("Diego Dapo Developer -  Hub Innovation");
+
 document.addEventListener("DOMContentLoaded", setupForm);
 
 async function fetchQuestions() {
