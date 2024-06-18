@@ -133,9 +133,9 @@ function updateResults(counts) {
 
   // Agregar la imagen después de los resultados
   const imageContent = `
-      <img src="./assets/cortica-cerebral.webp" 
+      <img src="./assets/sides-mind.png" 
            alt="Diagrama de Dominancia Cerebral" 
-           style="width: 100%; height: auto; margin-top: 20px;">
+           style="width: 100%; height: auto; margin-top: 23px;">
   `;
 
   resultsDiv.insertAdjacentHTML("beforeend", imageContent);
