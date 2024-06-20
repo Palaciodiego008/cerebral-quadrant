@@ -1,5 +1,3 @@
-// JavaScript
-
 console.log("Diego Dapo Developer - Hub Innovation");
 
 document.addEventListener("DOMContentLoaded", setupForm);
@@ -46,7 +44,11 @@ async function setupForm() {
     const rasgoMapping = getRasgoMapping();
     const form = document.getElementById("questionnaire-form");
     questions.forEach((question, index) => {
-      const questionElement = createQuestionElement(question, index, rasgoMapping);
+      const questionElement = createQuestionElement(
+        question,
+        index,
+        rasgoMapping
+      );
       form.appendChild(questionElement);
     });
     setupRadioListeners();
@@ -58,18 +60,20 @@ async function setupForm() {
 
 function setupRadioListeners() {
   const radioButtons = document.querySelectorAll('input[type="radio"]');
-  
+
   radioButtons.forEach((radio) => {
     radio.addEventListener("change", () => {
       // Get the question container for the radio button
-      let questionContainer = radio.closest('.question');
-      
-      if (questionContainer) {
-        questionContainer.querySelectorAll('.option').forEach(optionContainer => {
-          optionContainer.style.backgroundColor = ""; //
-        });
+      let questionContainer = radio.closest(".question");
 
-        const optionContainer = radio.closest('.option');
+      if (questionContainer) {
+        questionContainer
+          .querySelectorAll(".option")
+          .forEach((optionContainer) => {
+            optionContainer.style.backgroundColor = ""; //
+          });
+
+        const optionContainer = radio.closest(".option");
         if (optionContainer) {
           optionContainer.style.backgroundColor = "yellow";
         }
@@ -78,7 +82,6 @@ function setupRadioListeners() {
   });
 }
 
-
 function setupModalCloseEvent() {
   const closeModalButton = document.querySelector(".close");
   closeModalButton.addEventListener("click", () => toggleModal(false));
@@ -86,7 +89,7 @@ function setupModalCloseEvent() {
 
 function toggleModal(show) {
   const modal = document.getElementById("modal");
-  modal.style.display = show ? "block" : "none";
+  modal.style.display = show ? "flex" : "none";
 }
 
 function calculateResults() {
@@ -121,14 +124,14 @@ const categoryDescriptions = {
 function updateResults(counts) {
   const resultsDiv = document.getElementById("results");
   // Establecer el título una vez
-  resultsDiv.innerHTML = "<h2>Resultados</h2><br>";
+  resultsDiv.innerHTML = "<h2 class='result-title'>Resultados</h2><br>";
 
   // Agregar los resultados con las descripciones sin sobrescribir el título
   const resultsContent = Object.entries(counts)
     .map(
       ([key, value]) => `
-          <h3>${key}: ${value * 20}</h3>
-          <p>${categoryDescriptions[key].description}</p>
+          <h3 class='result-value'>${key}: ${value * 20}</h3>
+          <p class='description-result'>${categoryDescriptions[key].description}</p>
       `
     )
     .join("");
@@ -136,14 +139,14 @@ function updateResults(counts) {
   // Usar insertAdjacentHTML para agregar después del título
   resultsDiv.insertAdjacentHTML("beforeend", resultsContent);
 
-  // Agregar la imagen después de los resultados
-  const imageContent = `
-      <img src="./assets/sides-mind.png" 
-           alt="Diagrama de Dominancia Cerebral" 
-           style="width: 100%; height: auto; margin-top: 23px;">
+  // Agregar el video después de los resultados
+  const videoContent = `
+      <video width="100%" height="auto" controls autoplay muted style="margin-top: 23px;">
+        <source src="./assets/CEREBRO_CURSOBIENESTAR.mp4" type="video/mp4">
+      </video>
   `;
 
-  resultsDiv.insertAdjacentHTML("beforeend", imageContent);
+  resultsDiv.insertAdjacentHTML("beforeend", videoContent);
 }
 
 function getRasgoMapping() {
