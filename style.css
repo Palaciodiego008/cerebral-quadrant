@@ -23,7 +23,6 @@ body {
 
 h1 {
     color: #0801c3;
-    /* Azul primario */
     text-align: center;
     font-size: 2.3em;
     margin-bottom: 20px;
@@ -33,6 +32,21 @@ h1 {
     text-align: center;
     font-size: 1.2em;
     margin-bottom: 20px;
+}
+
+.introduction {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.introduction ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.introduction ul li {
+    margin-bottom: 10px;
 }
 
 form div {
@@ -47,9 +61,7 @@ form p {
 
 .option {
     background-color: #fff;
-    /* Fondo blanco */
     border: 2px solid #0801c3;
-    /* Borde azul */
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 10px;
@@ -58,12 +70,10 @@ form p {
 
 input:focus {
     border: 2px solid yellow;
-    /* Cambia el color del borde a amarillo */
 }
 
 .option:hover {
     transform: translateY(-5px);
-    /* Efecto de levantamiento al pasar el cursor */
 }
 
 .option label {
@@ -72,10 +82,8 @@ input:focus {
     font-size: 1.1em;
 }
 
-/* Estilo para el radio button personalizado */
 .option input[type="radio"] {
     display: none;
-    /* Ocultar el radio button original */
 }
 
 .option input[type="radio"]+label {
@@ -92,18 +100,14 @@ input:focus {
     width: 20px;
     height: 20px;
     border: 2px solid #0801c3;
-    /* Borde inicialmente azul */
     border-radius: 50%;
     background-color: #fff;
-    /* Fondo blanco */
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
 }
 
 .option input[type="radio"]:checked+label::before {
     background-color: #fed900;
-    /* Fondo amarillo cuando está seleccionado */
     border-color: #fed900;
-    /* Borde amarillo cuando está seleccionado */
 }
 
 button {
@@ -111,9 +115,7 @@ button {
     width: 100%;
     padding: 15px;
     background-color: #fed900;
-    /* Amarillo secundario */
     color: #0801c3;
-    /* Azul primario */
     border: none;
     border-radius: 5px;
     font-size: 1.2em;
@@ -124,12 +126,9 @@ button {
 
 button:hover {
     background-color: #f0e68c;
-    /* Amarillo más claro */
     color: #0056b3;
-    /* Azul más oscuro */
 }
 
-/* Estilos para la ventana modal */
 #modal {
     display: none;
     position: fixed;
@@ -170,7 +169,6 @@ button:hover {
 #results {
     margin-top: 20px;
 }
-
 
 .result-title {
     color: #0801c3;
