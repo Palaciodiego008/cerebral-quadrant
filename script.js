@@ -1,6 +1,12 @@
-console.log("Diego Dapo Developer - Hub Innovation");
-
-document.addEventListener("DOMContentLoaded", setupForm);
+document.addEventListener("DOMContentLoaded", () => {
+  toggleSpinner(true);
+  setTimeout(() => {
+    setupForm().then(() => {
+      toggleSpinner(false);
+      document.querySelector('.container').style.display = 'block';
+    });
+  }, 1000);
+});
 
 async function fetchQuestions() {
   try {
@@ -164,4 +170,9 @@ function getRasgoMapping() {
     ["LI", "CI", "LD", "CD"],
     ["LD", "CI", "LI", "CD"],
   ];
+}
+
+function toggleSpinner(show) {
+  const spinner = document.getElementById("spinner");
+  spinner.style.display = show ? "block" : "none";
 }
