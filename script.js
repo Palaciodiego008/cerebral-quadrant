@@ -129,10 +129,7 @@ const categoryDescriptions = {
 
 function updateResults(counts) {
   const resultsDiv = document.getElementById("results");
-  // Establecer el título una vez
   resultsDiv.innerHTML = "<h2 class='result-title'>Resultados</h2><br>";
-
-  // Agregar los resultados con las descripciones sin sobrescribir el título
   const resultsContent = Object.entries(counts)
     .map(
       ([key, value]) => `
@@ -142,10 +139,8 @@ function updateResults(counts) {
     )
     .join("");
 
-  // Usar insertAdjacentHTML para agregar después del título
   resultsDiv.insertAdjacentHTML("beforeend", resultsContent);
 
-  // Agregar el video después de los resultados
   const videoContent = `
       <video width="100%" height="auto" controls autoplay muted style="margin-top: 23px;">
         <source src="./assets/CEREBRO_CURSOBIENESTAR.mp4" type="video/mp4">
